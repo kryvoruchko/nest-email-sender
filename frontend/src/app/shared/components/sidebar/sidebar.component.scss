@@ -1,0 +1,37 @@
+.navbar-brand {
+  width: 100%;
+  margin: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #23354e;
+
+  & > img {
+    width: 120px;
+  }
+}
+
+.sidebar-list {
+  .sidebar-item {
+    a {
+      padding: 20px 20px 20px 40px;
+      display: flex;
+      text-decoration: none;
+      color: #cdcdce;
+      transition: all 0.1s linear;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      & > i {
+        margin-right: 15px;
+      }
+
+      &:hover {
+        background: #3b577b;
+        color: #6ed6e1;
+        transition: all 0.1s linear;
+      }
+    }
+  }
+}

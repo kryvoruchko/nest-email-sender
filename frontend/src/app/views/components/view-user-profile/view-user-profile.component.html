@@ -1,0 +1,73 @@
+<div class="container container-default">
+  <div class="row h-100">
+    <div class="col-md-4">
+      <div class="profile-details-content h-100">
+        <h3>Professional details</h3>
+        <img class="profile-image" [src]="'assets/images/pexels-photo-220453.jpeg'">
+        <div>
+          <div class="user-details-item">
+            <span class="details-title">Name</span>
+            <span class="details-description">{{ profile?.user.firstName }} {{ profile?.user.lastName }}</span>
+          </div>
+          <div class="user-details-item">
+            <span class="details-title">Age</span>
+            <span class="details-description">{{ profile?.age }}</span>
+          </div>
+          <div class="user-details-item">
+            <span class="details-title">Location</span>
+            <span class="details-description">{{ profile?.location }}</span>
+          </div>
+          <div class="user-details-item">
+            <span class="details-title">Experience</span>
+            <span class="details-description">{{ profile?.experience }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="profile-details-content h-100">
+        <h3>About me</h3>
+        <div class="d-flex mb-4">
+          <div class="w-50">
+            <div class="user-details-item">
+              <span class="details-title">Name</span>
+              <span class="details-description">{{ profile?.user.firstName }} {{ profile?.user.lastName }}</span>
+            </div>
+            <div class="user-details-item">
+              <span class="details-title">Location</span>
+              <span class="details-description">{{profile?.location}}</span>
+            </div>
+            <div class="user-details-item">
+              <span class="details-title">Phone</span>
+              <span class="details-description">{{profile?.user.phone}}</span>
+            </div>
+            <div class="user-details-item">
+              <span class="details-title">Email</span>
+              <span class="details-description">{{profile?.user.email}}</span>
+            </div>
+          </div>
+          <div class="w-50">
+            <div class="user-details-item">
+              <span class="details-title">Age</span>
+              <span class="details-description">{{profile?.age}}</span>
+            </div>
+            <div class="user-details-item">
+              <span class="details-title">Experience</span>
+              <span class="details-description">{{profile?.experience}}</span>
+            </div>
+            <div class="user-details-item">
+              <span class="details-title">Carrer level</span>
+              <span class="details-description">{{profile?.carrerLevel}}</span>
+            </div>
+            <div class="user-details-item">
+              <span class="details-title">Website</span>
+              <span class="details-description">{{profile?.website}}</span>
+            </div>
+          </div>
+        </div>
+        <h3>I'm web dev</h3>
+        <p class="about-user-description">{{profile?.info}}</p>
+      </div>
+    </div>
+  </div>
+</div>

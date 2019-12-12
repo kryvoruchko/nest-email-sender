@@ -1,0 +1,42 @@
+<div>
+  <a class="navbar-brand" [routerLink]="'/' + role + '/dashboard'">
+    <img src="assets/images/logo.svg" alt=" Logo">
+  </a>
+  <ul class="sidebar-list">
+    <li class="sidebar-item">
+      <a [routerLink]="'/' + role + '/dashboard'">
+        <i class="material-icons">dashboard</i> Dashboard
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a [routerLink]="'/' + role + '/profile'">
+        <i class="material-icons">person_pin</i> Profile
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a [routerLink]="'/' + role + '/feed'">
+        <i class="material-icons">filter_none</i> feed
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a [routerLink]="'/' + role + '/statistic'">
+        <i class="material-icons">timeline</i> statistics
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a [routerLink]="'/' + role + '/team'">
+        <i class="material-icons">people_alt</i> team
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a [routerLink]="'/' + role + '/projects'">
+        <i class="material-icons">folder_open</i> projects
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a [routerLink]="'/' + role + '/settings'">
+        <i class="material-icons">settings_applications</i> settings
+      </a>
+    </li>
+  </ul>
+</div>

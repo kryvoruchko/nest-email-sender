@@ -1,0 +1,43 @@
+.profile-details-content {
+  background: #ffffff;
+
+  & > h3 {
+    padding: 15px 20px;
+    border-bottom: 2px solid #f1f1f1;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #2d2d2d;
+    margin-bottom: 1rem;
+  }
+
+  .about-user-description {
+    padding: 15px 20px;
+  }
+
+  .profile-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    margin-top: -18px;
+  }
+
+  .user-details-item {
+    width: 100%;
+    display: flex;
+    padding: 5px 20px;
+
+    .details-title {
+      width: 50%;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #2d2d2d;
+    }
+
+    .details-description {
+      width: 50%;
+      font-size: 16px;
+      color: #696969;
+    }
+  }
+}
