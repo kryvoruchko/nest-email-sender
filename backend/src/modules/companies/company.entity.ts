@@ -1,4 +1,11 @@
-import { Column, Entity, OneToMany, ManyToMany, ManyToOne } from 'typeorm';
+import {
+  Column,
+  Entity,
+  OneToMany,
+  ManyToMany,
+  ManyToOne,
+  JoinTable,
+} from 'typeorm';
 import { ApiProperty } from '@nestjs/swagger';
 import { BaseEntity } from 'src/common/base.entity';
 import { User } from '../users/user.entity';
@@ -9,16 +16,4 @@ export class Company extends BaseEntity {
   @Column()
   @ApiProperty()
   name: string;
-
-  @ManyToOne(
-    type => User,
-    user => user.companies,
-  )
-  users: User[];
-
-  @ManyToOne(
-    type => Project,
-    project => project.company,
-  )
-  projects: Project[];
 }

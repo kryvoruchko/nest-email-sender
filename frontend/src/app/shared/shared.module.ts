@@ -10,13 +10,17 @@ import { HeaderComponent } from "./components/header/header.component";
 import { PreloaderComponent } from "./components/preloader/preloader.component";
 import { HeaderService } from "./components/header/header.service";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { DashboardComponent } from "../views/components/dashboard/dashboard.component";
+import { UsersComponent } from "../views/components/users/users.component";
 
 @NgModule({
   declarations: [
     PageNotFoundComponent,
     HeaderComponent,
     PreloaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    DashboardComponent,
+    UsersComponent
   ],
   imports: [CommonModule, RouterModule, ReactiveFormsModule, NgbModule],
   providers: [HeaderService],
@@ -27,7 +31,9 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
     HeaderComponent,
     ReactiveFormsModule,
     PreloaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    DashboardComponent,
+    UsersComponent
   ]
 })
 export class SharedModule {}

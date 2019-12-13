@@ -10,7 +10,7 @@ import { UserInterface } from "src/app/models/user";
 })
 export class HeaderComponent implements OnInit {
   public profile: UserInterface;
-  public role = "developer";
+  public role = "admin";
 
   constructor(
     public authService: AuthService,

@@ -12,7 +12,17 @@ import { ProjectsModule } from './modules/projects/projects.module';
 import { UsersProjectsModule } from './modules/users-projects/users-projects.module';
 
 @Module({
-  imports: [AuthModule, UsersModule, TypeOrmModule.forRoot(), RolesModule, ProfileModule, CompaniesModule, CompaniesUsersModule, ProjectsModule, UsersProjectsModule],
+  imports: [
+    AuthModule,
+    UsersModule,
+    TypeOrmModule.forRoot(),
+    RolesModule,
+    ProfileModule,
+    CompaniesModule,
+    CompaniesUsersModule,
+    ProjectsModule,
+    UsersProjectsModule,
+  ],
   providers: [
     {
       provide: APP_INTERCEPTOR,

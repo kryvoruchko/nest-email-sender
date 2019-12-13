@@ -1,1 +1,24 @@
-<p>admin works!</p>
+<div class="view-container">
+  <div class="sidebar-container">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="container-content">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- <div class="product-items-active">
+  <div class="col-md-4 col-lg-3" *ngFor="let product of catalog" (click)="openProduct(content, product)">
+    <div class="single-product-items">
+      <div class="product-item-image">
+        <img [src]="imgUrl + 'static/' + product.img" alt="Product">
+      </div>
+      <div class="product-item-content text-center mt-30">
+        <h5 class="product-title">{{ product.title }}</h5>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<app-preloader *ngIf="preloader"></app-preloader>

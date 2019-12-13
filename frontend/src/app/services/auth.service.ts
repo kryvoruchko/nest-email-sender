@@ -12,7 +12,7 @@ import { Router } from "@angular/router";
 export class AuthService {
   private url = environment.url;
   private email: string;
-  public role: string = "developer";
+  public role: string = "admin";
 
   constructor(private _http: HttpClient, private _router: Router) {}
 

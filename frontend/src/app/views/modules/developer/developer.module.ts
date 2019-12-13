@@ -14,11 +14,7 @@ import { DashboardComponent } from "../../components/dashboard/dashboard.compone
 import { ViewUserProfileComponent } from "../../components/view-user-profile/view-user-profile.component";
 
 @NgModule({
-  declarations: [
-    DeveloperComponent,
-    DashboardComponent,
-    ViewUserProfileComponent
-  ],
+  declarations: [DeveloperComponent, ViewUserProfileComponent],
   imports: [CommonModule, SharedModule, DeveloperRoutingModule],
   providers: [AuthGuard]
 })

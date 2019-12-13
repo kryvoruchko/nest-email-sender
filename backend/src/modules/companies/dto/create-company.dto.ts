@@ -1,8 +1,6 @@
-import { IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
-export class UpdateCompanyDto {
-  @IsString()
+export class CreateCompanyDto {
   @ApiProperty()
   readonly name?: string;
 }

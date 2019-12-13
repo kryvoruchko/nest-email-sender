@@ -12,6 +12,11 @@ const routes: Routes = [
   {
     path: "",
     loadChildren: () =>
+      import("./views/modules/admin/admin.module").then(m => m.AdminModule)
+  },
+  {
+    path: "",
+    loadChildren: () =>
       import("./views/modules/developer/developer.module").then(
         m => m.DeveloperModule
       )
@@ -22,11 +27,6 @@ const routes: Routes = [
       import("./views/modules/manager/manager.module").then(
         m => m.ManagerModule
       )
-  },
-  {
-    path: "",
-    loadChildren: () =>
-      import("./views/modules/admin/admin.module").then(m => m.AdminModule)
   },
   { path: "**", component: PageNotFoundComponent }
 ];
