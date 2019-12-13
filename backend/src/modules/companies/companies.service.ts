@@ -31,6 +31,11 @@ export class CompaniesService {
     return await this.companyRepository.save(createCompanyDto);
   }
 
+  async delete(id: number): Promise<boolean> {
+    const result = await this.companyRepository.delete({ id });
+    return !!result.affected;
+  }
+
   async updateCompany(
     id: number,
     updateCompanyDto: UpdateCompanyDto,

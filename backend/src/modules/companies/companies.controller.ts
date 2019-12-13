@@ -44,11 +44,37 @@ export class CompaniesController {
     return this.companiesService.getAllCompanies();
   }
 
+  @Post()
+  @ApiResponse({ status: 200, type: Company })
+  @ApiOperation({ description: 'Create company' })
+  create(@Body() createCompanyDto: CreateCompanyDto): Promise<Company> {
+    return this.companiesService.create(createCompanyDto);
+  }
+
   @Get('/:companyId')
   @ApiOperation({ description: 'Get company by ID' })
   @ApiResponse({ status: 200, type: Company })
   getCompanyById(@Param('companyId') companyId: number): Promise<Company> {
     return this.companiesService.getCompanyById(companyId);
+  }
+
+  @Put('/:companyId')
+  @ApiResponse({ status: 200, type: Company })
+  @ApiOperation({ description: 'Update company' })
+  updateCompany(
+    @Body() updateCompanyDto: UpdateCompanyDto,
+    @Param('companyId') companyId: number,
+  ): Promise<Company> {
+    return this.companiesService.updateCompany(companyId, updateCompanyDto);
+  }
+
+  @Delete('/:companyId')
+  @ApiResponse({ status: 200 })
+  @ApiOperation({ description: 'Delete company' })
+  async delete(@Param('companyId') companyId: number): Promise<boolean> {
+    await this.companiesService.getCompanyById(companyId);
+    // delete company_projects
+    return this.companiesService.delete(companyId);
   }
 
   @Get('/:companyId/projects')
@@ -99,22 +125,5 @@ export class CompaniesController {
       projectId,
     );
     return this.projectsService.delete(companyId, projectId);
-  }
-
-  @Post()
-  @ApiResponse({ status: 200, type: Company })
-  @ApiOperation({ description: 'Create company' })
-  create(@Body() createCompanyDto: CreateCompanyDto): Promise<Company> {
-    return this.companiesService.create(createCompanyDto);
-  }
-
-  @Put('/:companyId')
-  @ApiResponse({ status: 200, type: Company })
-  @ApiOperation({ description: 'Update company' })
-  updateCompany(
-    @Body() updateCompanyDto: UpdateCompanyDto,
-    @Param('companyId') companyId: number,
-  ): Promise<Company> {
-    return this.companiesService.updateCompany(companyId, updateCompanyDto);
   }
 }
